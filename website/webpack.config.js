@@ -15,8 +15,8 @@ module.exports = {
         alias: {
             styles: path.resolve(__dirname, 'src', 'styles'),
         },
-        extensions: ['.js', '.jsx', '.scss',],
-        modules: [path.resolve(__dirname, 'src'), 'node_modules',],
+        extensions: ['.js', '.jsx', '.scss'],
+        modules: [path.resolve(__dirname, 'src'), 'node_modules'],
     },
 
     plugins: [
@@ -34,9 +34,9 @@ module.exports = {
             ],
             loader: 'babel',
             query: {
-                cacheDirectory: true,
+                cacheDirectory: '/tmp/',
             },
-        },],
+        }],
     },
 
     devServer: {

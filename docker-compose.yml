@@ -1,0 +1,17 @@
+version: '2'
+services:
+  website:
+    build: docker/website-dev
+    command: npm run start
+    ports:
+     - "3000:3000"
+    volumes:
+      - ./website:/opt/website
+      - website_deps:/opt/website/node_modules
+      - website_dist:/opt/website/dist
+
+volumes:
+  website_deps:
+    driver: local
+  website_dist:
+    driver: local
