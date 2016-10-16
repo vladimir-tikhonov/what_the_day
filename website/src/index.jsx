@@ -7,6 +7,8 @@ import getMuiTheme from 'material-ui/styles/getMuiTheme';
 
 import Routes from 'scripts/components/Routes.jsx';
 
+import '!!style!css!styles/index.scss';
+
 injectTapEventPlugin();
 
 const Root = () => (

@@ -32,5 +32,6 @@ module.exports = {
 
         'react/jsx-boolean-value': 'error',
         'react/jsx-no-duplicate-props': 'error',
+        'react/prop-types': ['error', {ignore: ['children']}]
     },
 };
