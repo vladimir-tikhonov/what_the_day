@@ -6,7 +6,8 @@
     "start": "webpack-dev-server --config webpack.config.js",
     "build": "webpack",
     "eslint": "eslint 'src/**/*.js?(x)'",
-    "eslint-fix": "eslint 'src/**/*.js?(x)' --fix"
+    "eslint-fix": "eslint 'src/**/*.js?(x)' --fix",
+    "sass-lint": "sass-lint -c sass-lint.yml -v -q"
   },
   "repository": {
     "type": "git",
@@ -20,7 +21,6 @@
   "homepage": "https://github.com/vladimir-tikhonov/what_the_day#readme",
   "dependencies": {
     "material-ui": "^0.16.0",
-    "npm": "^3.10.8",
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
     "react-router": "^2.8.1",
@@ -32,9 +32,15 @@
     "babel-loader": "^6.2.5",
     "babel-preset-es2015": "^6.16.0",
     "babel-preset-react": "^6.16.0",
+    "css-loader": "^0.25.0",
     "eslint": "^3.8.0",
     "eslint-plugin-react": "^6.4.1",
     "html-webpack-plugin": "^2.22.0",
+    "node-sass": "^3.10.1",
+    "react-css-modules": "^3.7.10",
+    "sass-lint": "^1.9.1",
+    "sass-loader": "^4.0.2",
+    "style-loader": "^0.13.1",
     "webpack": "^2.1.0-beta.25",
     "webpack-dev-server": "^2.1.0-beta.9"
   }
