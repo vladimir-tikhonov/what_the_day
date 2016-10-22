@@ -3,8 +3,8 @@ defmodule WhatTheDay.Mixfile do
 
   def project do
     [app: :what_the_day,
-     version: "0.0.1",
-     elixir: "~> 1.2",
+     version: "0.1.0",
+     elixir: "~> 1.3",
      elixirc_paths: elixirc_paths(Mix.env),
      compilers: [:phoenix, :gettext] ++ Mix.compilers,
      build_embedded: Mix.env == :prod,
@@ -23,8 +23,8 @@ defmodule WhatTheDay.Mixfile do
   end
 
   # Specifies which paths to compile per environment.
-  defp elixirc_paths(:test), do: ["lib", "web", "test/support"]
-  defp elixirc_paths(_),     do: ["lib", "web"]
+  defp elixirc_paths(:test), do: ["lib", "web", "app", "test/support"]
+  defp elixirc_paths(_),     do: ["lib", "web", "app"]
 
   # Specifies your project dependencies.
   #

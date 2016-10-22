@@ -16,3 +16,6 @@ build-ci:
 
 connect-dev-db:
 	docker-compose run --rm postgres psql -h postgres -U postgres
+
+backend-console:
+	docker-compose run --rm backend iex -S mix
