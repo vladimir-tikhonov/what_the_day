@@ -7,7 +7,6 @@ services:
      - "3000:3000"
     volumes:
       - ./website:/opt/website
-      - website_deps:/opt/website/node_modules
       - website_dist:/opt/website/dist
 
 volumes:
