@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {PureComponent} from 'react';
 import {BottomNavigation, BottomNavigationItem} from 'material-ui/BottomNavigation';
 import Divider from 'material-ui/Divider';
 import CSSModules from 'react-css-modules';
@@ -18,7 +18,7 @@ const worldIcon = <IconLanguage style={iconStyle}/>;
 const buildIcon = <IconBuild style={iconStyle}/>;
 const accountCircleIcon = <IconAccountCircle style={iconStyle}/>;
 
-class Navbar extends Component {
+class Navbar extends PureComponent {
     render() {
         const {selectedIndex, router} = this.props;
 
@@ -28,15 +28,15 @@ class Navbar extends Component {
                 <BottomNavigation styleName="navbar-mui-override" selectedIndex={selectedIndex}>
                     <BottomNavigationItem
                         styleName="item-mui-override"
-                        label="Global events"
+                        label="Global celebrations"
                         icon={worldIcon}
                         onTouchTap={() => router.push('/')} />
 
                     <BottomNavigationItem
                         styleName="item-mui-override"
-                        label="Custom events"
+                        label="Personal celebrations"
                         icon={buildIcon}
-                        onTouchTap={() => router.push('/custom')} />
+                        onTouchTap={() => router.push('/personal')} />
 
                     <BottomNavigationItem
                         styleName="item-mui-override"
@@ -56,6 +56,6 @@ Navbar.propTypes = {
 
 export default withRouter(CSSModules(Navbar, style));
 
-export const GLOBAL_EVENTS_ITEM_INDEX = 0;
-export const CUSTOM_EVENTS_ITEM_INDEX = 1;
+export const GLOBAL_CELEBRATIONS_ITEM_INDEX = 0;
+export const PERSONAL_CELEBRATIONS_ITEM_INDEX = 1;
 export const PROFILE_ITEM_INDEX = 2;
