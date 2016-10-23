@@ -7,6 +7,7 @@ services:
      - "3000:3000"
     volumes:
       - ./website:/opt/website
+      - frontend_deps:/opt/frontend/node_modules
       - website_dist:/opt/website/dist
 
   backend:
@@ -16,6 +17,8 @@ services:
       - "4000:4000"
     volumes:
       - ./backend:/opt/backend
+      - backend_deps:/opt/backend/deps
+      - backend_build:/opt/backend/_build
     links:
       - postgres
 
@@ -25,7 +28,13 @@ services:
       - pg_data:/var/lib/postgresql/data
 
 volumes:
+  frontend_deps:
+    driver: local
   website_dist:
     driver: local
   pg_data:
+    driver: local
+  backend_deps:
+    driver: local
+  backend_build:
     driver: local

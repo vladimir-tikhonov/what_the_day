@@ -8,6 +8,6 @@ defmodule WhatTheDay.Router do
   scope "/api/v1", WhatTheDay.Controllers.Api.V1 do
     pipe_through :api
 
-    get "/global_events", GlobalEventsController, :index
+    get "/global_celebrations", GlobalCelebrationsController, :index
   end
 end
