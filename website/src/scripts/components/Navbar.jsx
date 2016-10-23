@@ -2,7 +2,7 @@ import React, {PureComponent} from 'react';
 import {BottomNavigation, BottomNavigationItem} from 'material-ui/BottomNavigation';
 import Divider from 'material-ui/Divider';
 import CSSModules from 'react-css-modules';
-import { withRouter } from 'react-router';
+import {withRouter} from 'react-router';
 
 import IconLanguage from 'material-ui/svg-icons/action/language';
 import IconBuild from 'material-ui/svg-icons/action/build';
@@ -12,7 +12,7 @@ import style from 'styles/components/Navbar.scss';
 
 const iconStyle = {
     height: '4em',
-}
+};
 
 const worldIcon = <IconLanguage style={iconStyle}/>;
 const buildIcon = <IconBuild style={iconStyle}/>;
@@ -45,14 +45,14 @@ class Navbar extends PureComponent {
                         onTouchTap={() => router.push('/profile')} />
                 </BottomNavigation>
             </div>
-        )
+        );
     }
 }
 
 Navbar.propTypes = {
     selectedIndex: React.PropTypes.number.isRequired,
     router: React.PropTypes.object.isRequired,
-}
+};
 
 export default withRouter(CSSModules(Navbar, style));
 
