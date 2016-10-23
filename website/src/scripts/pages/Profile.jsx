@@ -1,9 +1,9 @@
-import * as React from 'react';
+import React, {PureComponent} from 'react';
 
 import Navbar, {PROFILE_ITEM_INDEX} from 'scripts/components/Navbar.jsx';
 import Page from 'scripts/components/Page.jsx';
 
-class Profile extends React.Component {
+class Profile extends PureComponent {
     render() {
         return (
             <Page>

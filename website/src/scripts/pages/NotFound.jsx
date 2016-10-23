@@ -1,6 +1,6 @@
-import * as React from 'react';
+import React, {PureComponent} from 'react';
 
-class NotFound extends React.Component {
+class NotFound extends PureComponent {
     render() {
         return (
             <h2>404 :(</h2>
