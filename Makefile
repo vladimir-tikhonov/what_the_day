@@ -8,6 +8,9 @@ setup-dev:
 start:
 	docker-compose up
 
+stop:
+	docker-compose down
+
 build-ci:
 	docker-compose run --rm website npm run build
 	docker-compose run --rm website npm run eslint

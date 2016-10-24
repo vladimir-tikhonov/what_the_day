@@ -22,11 +22,17 @@
   },
   "homepage": "https://github.com/vladimir-tikhonov/what_the_day#readme",
   "dependencies": {
+    "axios": "^0.15.2",
+    "camelize": "^1.0.0",
     "material-ui": "^0.16.1",
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
+    "react-redux": "^4.4.5",
     "react-router": "^2.8.1",
-    "react-tap-event-plugin": "^1.0.0"
+    "react-tap-event-plugin": "^1.0.0",
+    "redux": "^3.6.0",
+    "redux-thunk": "^2.1.0",
+    "url-join": "^1.1.0"
   },
   "devDependencies": {
     "babel-core": "^6.17.0",

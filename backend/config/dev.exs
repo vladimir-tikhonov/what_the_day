@@ -29,3 +29,5 @@ config :what_the_day, WhatTheDay.Repo,
   database: "what_the_day_dev",
   hostname: "postgres",
   pool_size: 10
+
+config(:what_the_day, :cors_origin, "http://localhost:3000")

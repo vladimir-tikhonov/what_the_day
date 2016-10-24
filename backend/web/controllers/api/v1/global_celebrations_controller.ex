@@ -4,13 +4,13 @@ defmodule WhatTheDay.Controllers.Api.V1.GlobalCelebrationsController do
   alias(WhatTheDay.Repositories.GlobalCelebrationsRepository)
 
   def index(conn, _params) do
-    country = WhatTheDay.Countries.Belarus # TODO: fetch from current user
+    country = WhatTheDay.Countries.Belarus # TODO: fetch from request or current user
     date = ~D[2016-10-10] # TODO: get current date
 
     celebrations =
       GlobalCelebrationsRepository.celebrations_at_country(country) |>
       Enum.map(&(&1.to_json(date, country)))
 
-    json(conn, celebrations)
+    json(conn, %{celebrations: celebrations, country_id: country.id()})
   end
 end

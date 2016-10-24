@@ -29,6 +29,9 @@ module.exports = {
         'indent': ['error', 4],
         'eol-last': ['error', 'always'],
         'quotes': ['error', 'single'],
+        'semi': ['error', 'always'],
+        'object-curly-spacing': ['error', 'never'],
+        'no-multiple-empty-lines': ['error'],
 
         'react/jsx-boolean-value': 'error',
         'react/jsx-no-duplicate-props': 'error',
