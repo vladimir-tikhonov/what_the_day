@@ -1,4 +1,5 @@
 defmodule WhatTheDay.Utils.DateMatcher do
+  @moduledoc false
   alias(WhatTheDay.DateMatchers)
 
   def matches?(%Date{day: day, month: month}, %DateMatchers.Simple{day: day, month: month}), do: true

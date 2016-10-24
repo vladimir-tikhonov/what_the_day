@@ -1,4 +1,5 @@
 defmodule WhatTheDay.Controllers.Api.V1.GlobalCelebrationsController do
+  @moduledoc false
   use WhatTheDay.Web, :controller
 
   alias(WhatTheDay.Repositories.GlobalCelebrationsRepository)

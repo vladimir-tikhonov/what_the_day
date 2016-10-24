@@ -1,4 +1,5 @@
 defmodule WhatTheDay.GlobalCelebrations.ProgrammersDay do
+  @moduledoc false
   use(WhatTheDay.GlobalCelebration)
 
   alias(WhatTheDay.DateMatchers)
