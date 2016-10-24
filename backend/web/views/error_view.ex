@@ -1,4 +1,5 @@
 defmodule WhatTheDay.ErrorView do
+  @moduledoc false
   use WhatTheDay.Web, :view
 
   def render("404.json", _assigns) do

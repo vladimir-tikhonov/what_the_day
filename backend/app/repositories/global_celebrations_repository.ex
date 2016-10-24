@@ -1,4 +1,5 @@
 defmodule WhatTheDay.Repositories.GlobalCelebrationsRepository do
+  @moduledoc false
   alias(WhatTheDay.GlobalCelebrations)
 
   @celebrations [

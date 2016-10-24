@@ -1,4 +1,5 @@
 defmodule WhatTheDay.GlobalCelebrations.MothersDay do
+  @moduledoc false
   use(WhatTheDay.GlobalCelebration)
 
   alias(WhatTheDay.Countries)

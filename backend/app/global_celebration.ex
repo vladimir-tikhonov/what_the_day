@@ -1,4 +1,5 @@
 defmodule WhatTheDay.GlobalCelebration do
+  @moduledoc false
   @type date_matcher :: %WhatTheDay.DateMatchers.Simple{}
                       | %WhatTheDay.DateMatchers.Countdown{}
                       | %WhatTheDay.DateMatchers.Falsy{}

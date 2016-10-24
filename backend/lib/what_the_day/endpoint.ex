@@ -1,4 +1,5 @@
 defmodule WhatTheDay.Endpoint do
+  @moduledoc false
   use Phoenix.Endpoint, otp_app: :what_the_day
 
   # Serve at "/" the static files from "priv/static" directory.
