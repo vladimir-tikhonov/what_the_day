@@ -1,5 +1,7 @@
-defmodule WhatTheDay.Utils.DateMatcher do
+defmodule WhatTheDay.Utils.DateMatchersHelper do
   @moduledoc false
+  use Timex
+
   alias(WhatTheDay.DateMatchers)
 
   def matches?(%Date{day: day, month: month}, %DateMatchers.Simple{day: day, month: month}), do: true
@@ -20,8 +22,16 @@ defmodule WhatTheDay.Utils.DateMatcher do
     nil
   end
 
-  def days_left(_date, %DateMatchers.Simple{}) do
-    0 # TODO: calculate when proper date library will be integrated
+  def days_left(date = %Date{year: year}, %DateMatchers.Simple{day: day, month: month}) do
+    {:ok, celebration_date_in_the_current_year} = Date.new(year, month, day)
+    celebration_date_in_the_next_year = Timex.shift(celebration_date_in_the_current_year, years: 1)
+
+    curent_year_diff = Timex.diff(celebration_date_in_the_current_year, date, :days)
+    if curent_year_diff >= 0 do
+      curent_year_diff
+    else
+      Timex.diff(celebration_date_in_the_next_year, date, :days)
+    end
   end
 
   def days_left(date, %DateMatchers.Countdown{countdown_func: countdown_func}) do

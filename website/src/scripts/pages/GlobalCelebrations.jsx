@@ -9,7 +9,7 @@ import {loadGlobalCelebrations} from 'scripts/actions/global_celebrations.js';
 import Page from 'scripts/components/Page.jsx';
 
 class GlobalCelebrations extends PureComponent {
-    componentWillMount() {
+    componentDidMount() {
         this.props.loadGlobalCelebrations(this.props.countryId);
     }
 

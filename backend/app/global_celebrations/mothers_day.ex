@@ -1,5 +1,8 @@
 defmodule WhatTheDay.GlobalCelebrations.MothersDay do
-  @moduledoc false
+  @moduledoc """
+  Wiki: https://en.wikipedia.org/wiki/Mother%27s_Day
+  """
+
   use(WhatTheDay.GlobalCelebration)
 
   alias(WhatTheDay.Countries)
