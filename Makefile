@@ -15,6 +15,7 @@ build-ci:
 	docker-compose run --rm website npm run build
 	docker-compose run --rm website npm run eslint
 	docker-compose run --rm website npm run sass-lint
+	docker-compose run --rm backend mix compile --warnings-as-errors
 	docker-compose run --rm backend mix dogma
 	docker-compose run --rm backend mix test
 
@@ -23,3 +24,6 @@ connect-dev-db:
 
 backend-console:
 	docker-compose run --rm backend iex -S mix
+
+backend-test:
+	docker-compose run --rm backend mix test

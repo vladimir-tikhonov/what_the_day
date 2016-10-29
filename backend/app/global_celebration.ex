@@ -7,7 +7,7 @@ defmodule WhatTheDay.GlobalCelebration do
   @callback id() :: String.t
   @callback countries_date_matcher() :: %{atom => date_matcher}
 
-  alias(WhatTheDay.Utils.DateMatcher)
+  alias(WhatTheDay.Utils.DateMatchersHelper)
 
   defmacro __using__(_) do
     quote do
@@ -25,11 +25,11 @@ defmodule WhatTheDay.GlobalCelebration do
       end
 
       def when_celebrated(country) do
-        DateMatcher.when_celebrated(country_date_matcher(country))
+        DateMatchersHelper.when_celebrated(country_date_matcher(country))
       end
 
       def days_left(date, country) do
-        DateMatcher.days_left(date, country_date_matcher(country))
+        DateMatchersHelper.days_left(date, country_date_matcher(country))
       end
 
       def to_json(date, country) do
