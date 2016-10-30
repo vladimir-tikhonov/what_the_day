@@ -15,7 +15,7 @@ module.exports = {
         alias: {
             styles: path.resolve(__dirname, 'src', 'styles'),
         },
-        extensions: ['.js', '.jsx', '.scss'],
+        extensions: ['.js', '.jsx', '.json', '.scss'],
         modules: [path.resolve(__dirname, 'src'), 'node_modules'],
     },
 
@@ -44,6 +44,10 @@ module.exports = {
                 'css?modules&importLoaders=1&localIdentName=[path]___[name]__[local]___[hash:base64:5]',
                 'sass',
             ],
+        },
+        {
+            test: /\.json$/,
+            loader: 'json',
         }],
     },
 
