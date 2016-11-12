@@ -1,4 +1,4 @@
-FROM node:6.9
+FROM node:7
 MAINTAINER Vladimir Tikhonov vladimir@tikhonov.by
 
 ENV APP_ROOT="/opt/website"
