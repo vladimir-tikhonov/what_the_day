@@ -20,10 +20,6 @@ defmodule WhatTheDay.Web do
     quote do
       use Phoenix.Controller
 
-      alias WhatTheDay.Repo
-      import Ecto
-      import Ecto.Query
-
       import WhatTheDay.Router.Helpers
       import WhatTheDay.Gettext
     end
