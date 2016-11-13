@@ -4,6 +4,7 @@ setup-dev:
 	docker-compose run --rm website npm install --quiet
 	docker-compose run --rm backend mix deps.get
 	docker-compose run --rm backend mix ecto.setup
+	docker-compose run --rm backend mix db.sync
 
 start:
 	docker-compose up

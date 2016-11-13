@@ -1,9 +1,9 @@
 defmodule WhatTheDay.Utils.DateMatchersHelperTest do
-  use(ExUnit.Case, async: true)
-  use(WhatTheDay.DateTools, async: true)
+  use ExUnit.Case, async: true
+  use WhatTheDay.DateTools
 
-  alias(WhatTheDay.Utils.DateMatchersHelper)
-  alias(WhatTheDay.DateMatchers)
+  alias WhatTheDay.Utils.DateMatchersHelper
+  alias WhatTheDay.DateMatchers
 
   test "#matches? with DateMatchers.Simple: today" do
     date_matcher = %DateMatchers.Simple{day: 10, month: 1}

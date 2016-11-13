@@ -1,7 +1,7 @@
 defmodule WhatTheDay.GlobalCelebrations.MothersDayTest do
-  use(ExUnit.Case, async: true)
-  use(WhatTheDay.DateTools, async: true)
-  use(WhatTheDay.CelebrationTools, async: true)
+  use ExUnit.Case, async: true
+  use WhatTheDay.DateTools
+  use WhatTheDay.CelebrationTools
 
   @subject WhatTheDay.GlobalCelebrations.MothersDay
 
