@@ -3,10 +3,10 @@ defmodule WhatTheDay.GlobalCelebrations.ProgrammersDay do
   Wiki: https://en.wikipedia.org/wiki/Day_of_the_Programmer
   """
 
-  use(WhatTheDay.GlobalCelebration)
-  use(Timex)
+  use WhatTheDay.GlobalCelebration
+  use Timex
 
-  alias(WhatTheDay.DateMatchers)
+  alias WhatTheDay.DateMatchers
 
   @id "programmers_day"
   @days_shift 255

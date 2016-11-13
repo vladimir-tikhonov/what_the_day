@@ -7,12 +7,10 @@ defmodule WhatTheDay.GlobalCelebration do
   @callback id() :: String.t
   @callback countries_date_matcher() :: %{atom => date_matcher}
 
-  alias(WhatTheDay.Utils.DateMatchersHelper)
+  alias WhatTheDay.Utils.DateMatchersHelper
 
   defmacro __using__(_) do
     quote do
-      @behaviour WhatTheDay.GlobalCelebration
-
       def celebrated_at?(country) do
         countries_date_matcher = countries_date_matcher()
 

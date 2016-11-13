@@ -3,10 +3,10 @@ defmodule WhatTheDay.GlobalCelebrations.MothersDay do
   Wiki: https://en.wikipedia.org/wiki/Mother%27s_Day
   """
 
-  use(WhatTheDay.GlobalCelebration)
+  use WhatTheDay.GlobalCelebration
 
-  alias(WhatTheDay.Countries)
-  alias(WhatTheDay.DateMatchers)
+  alias WhatTheDay.Countries
+  alias WhatTheDay.DateMatchers
 
   @id "mothers_day"
   def id, do: @id

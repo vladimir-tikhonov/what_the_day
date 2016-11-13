@@ -51,6 +51,7 @@ defmodule WhatTheDay.Mixfile do
   defp aliases do
     ["ecto.setup": ["ecto.create", "ecto.migrate", "run priv/repo/seeds.exs"],
      "ecto.reset": ["ecto.drop", "ecto.setup"],
+     "db.sync": ["global_celebrations.sync_db", "countries.sync_db"],
      "test": ["ecto.create --quiet", "ecto.migrate", "test"]]
   end
 end

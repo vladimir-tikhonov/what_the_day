@@ -3,7 +3,7 @@ defmodule WhatTheDay.Controllers.Api.V1.GlobalCelebrationsController do
   use WhatTheDay.Web, :controller
   use Timex
 
-  alias(WhatTheDay.Repositories.GlobalCelebrationsRepository)
+  alias WhatTheDay.Repositories.GlobalCelebrationsRepository
 
   def index(conn, _params) do
     country = WhatTheDay.Countries.Belarus # TODO: fetch from request or current user

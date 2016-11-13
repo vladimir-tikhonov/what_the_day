@@ -2,7 +2,7 @@ defmodule WhatTheDay.Utils.DateMatchersHelper do
   @moduledoc false
   use Timex
 
-  alias(WhatTheDay.DateMatchers)
+  alias WhatTheDay.DateMatchers
 
   def matches?(%Date{day: day, month: month}, %DateMatchers.Simple{day: day, month: month}), do: true
   def matches?(%Date{}, %DateMatchers.Simple{}), do: false
