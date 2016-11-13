@@ -4,6 +4,9 @@ defmodule WhatTheDay.Router do
 
   pipeline :api do
     plug :accepts, ["json"]
+    if Mix.env === :dev do
+      plug WhatTheDay.Plugs.UserIdAuth
+    end
   end
 
   scope "/api/v1", WhatTheDay.Controllers.Api.V1 do
